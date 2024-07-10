@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel = "stylesheet" href = "main.css">
+</head>
+
+<body>
+    <h1 style = "text-align:center;background-color:bisque;padding:0.5em;display:block;margin:auto;width:15em;border-radius:15px;"> Welcome to my Survey! </h1>
+    
+    <form>
+    <fieldset> 
+        <!-- You can also use grid layout instead of fieldset for better layout design -->
+        <legend>Personal Information</legend>
+        <p>Full Name:</p>
+        <input type = "text" placeholder = "(First name, Last name, M.I)" required>
+
+        <p>Address:</p>
+        <input type = "text" placeholder = "Address" required>
+
+        <p>Sex:</p>
+        <label><input type="radio" name="gender" value="male" style = "width:auto;"> Male</label>
+        <input id="female" type="radio" name="gender" value="female" style = "width:auto;"> <label for ="female">Female</label>
+        
+        <p>Birthdate:</p>
+        <input type="date" name="birthday" style = "width:20%;" required><br><br>
+
+        <legend>What gadgets do you use?</legend><br>
+        <label><input type = "checkbox" style = "width:auto;">Smartphone</label>
+        <label><input type = "checkbox" style = "width:auto;margin-left:2em;">Tablet</label><Br>
+        <label><input type = "checkbox" style = "width:auto;">Laptop</label>
+        <label><input type = "checkbox" style = "width:auto;margin-left:4.9em;">Desktop</label>
+
+        <p>Others:</p>
+        <input type = "text" style = "background:transparent;border-color:#99582a;border-width:0px 0px 2px 0px;border-radius:0;width:auto;color:#99582a;"><Br><br>
+
+        <legend>How long do you usually use your gadget?</legend>
+        <br>
+
+        <input id="hour1" type="radio" name="gender" value="female" style = "width:auto;"> <label for ="hour1">1 - 2 hours a day</label>
+        <input id="hour2" type="radio" name="gender" value="female" style = "width:auto;"> <label for ="hour2">3 - 5 hours a day</label>
+        <input id="hour3" type="radio" name="gender" value="female" style = "width:auto;"> <label for ="hour3">6 - 8 hours a day</label>
+        <input id="hour4" type="radio" name="gender" value="female" style = "width:auto;"> <label for ="hour4">Above 8 hours</label><Br><br>
+
+        <p>Why do you think technology is important to our everyday lives?</p>
+        <input type = "text" style = "background:transparent;border-color:#99582a;border-width:0px 0px 2px 0px;border-radius:0;width:100%;color:#99582a;" required>
+        <br><br>
+        
+        <p>Please rate this survey from 1 - 10 with 10 being the highest</p>
+        <input type="range" id="numberInput" name="numberInput" min="0" max="10" step="1" value="5" required><br>
+
+        <output for="numberInput" id="selectedNumber">5</output>
+        <script src = "main.js"></script>
+
+        <button class="button-10" role="button">
+            <span class="text">Submit</span>
+        </button>
+
+    </fieldset>
+    </form>
+</body>
+
+</html>
